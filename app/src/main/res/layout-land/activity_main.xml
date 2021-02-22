@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:baselineAligned="false">
+
+    <fragment
+        android:id="@+id/fragment_room"
+        android:name="ru.dpankratov.projects.rpg.explorer.room"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        tools:layout="@layout/fragment_room"></fragment>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/fragment_message"
+            android:name="ru.dpankratov.projects.rpg.explorer.dialog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="90"
+            tools:layout="@layout/fragment_message" />
+
+        <fragment
+            android:id="@+id/fragment4"
+            android:name="ru.dpankratov.projects.rpg.explorer.actions"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            tools:layout="@layout/fragment_actions" />
+    </LinearLayout>
+
+</LinearLayout>
